@@ -16,10 +16,12 @@ The code and data will be released by June 20th (i.e. CVPR 2023 conference)
 ## Citation
 
 ```
-@inproceedings{li2023dynibar,
-  title         = {DynIBaR: Neural Dynamic Image-Based Rendering},
-  author        = {Li, Zhengqi and Wang, Qianqian and Cole, Forrester and Tucker, Richard and Snavely, Noah},
-  booktitle     = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year          = {2023},
+@InProceedings{Li_2023_CVPR,
+    author    = {Li, Zhengqi and Wang, Qianqian and Cole, Forrester and Tucker, Richard and Snavely, Noah},
+    title     = {DynIBaR: Neural Dynamic Image-Based Rendering},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {4273-4284}
 }
 ```
