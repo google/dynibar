@@ -55,7 +55,7 @@ Run the following command for each scene to obtain reported quantitative results
   # Usage: In txt file, You need to change "rootdir" to your code root directory,
   # and "folder_path" to input data directory, and make sure "coarse_dir" points to
   # "checkpoints" folder you unzip.
-  python evaluation.py --config configs_nvidia/eval_balloon1_long.txt
+  python eval_nvidia.py --config configs_nvidia/eval_balloon1_long.txt
 ```
 
 Note: It will take ~8 hours to evaluate each scene with 4x Nvidia A100 GPUs.
