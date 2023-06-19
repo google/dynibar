@@ -1,0 +1,27 @@
+expname = umbrella
+
+rootdir = /home/zhengqili/dynibar
+
+folder_path = /home/zhengqili/nvidia_long_release
+
+coarse_dir = checkpoints/coarse/umbrella
+
+distributed = False
+
+## dataset
+eval_dataset = Nvidia
+eval_scenes = Umbrella
+### TESTING
+chunk_size = 8192
+
+### RENDERING
+N_importance = 64
+N_samples = 64
+inv_uniform = True
+anti_alias_pooling = 1
+mask_rgb = 0
+
+input_dir = True
+input_xyz = False
+
+mask_static = True

@@ -1,0 +1,69 @@
+expname = kid-running-test
+
+rootdir = /home/zhengqili/dynibar
+
+folder_path = /home/zhengqili/release
+
+no_reload = False
+render_stride = 1
+distributed = False
+no_load_opt = True
+no_load_scheduler = True
+n_iters = 400000
+
+## dataset
+train_dataset = monocular
+train_scenes = kid-running
+eval_dataset = monocular
+eval_scenes = kid-running
+
+### TRAINING
+N_rand = 3072
+lrate_feature = 8e-4
+lrate_mlp = 4e-4
+lrate_decay_factor = 0.5
+init_decay_epoch = 400 # modify this s.t. num_imgs * num_epoch ~= 30-40K
+
+### TESTING
+chunk_size = 8192
+
+### RENDERING
+N_importance = 0
+N_samples = 64
+inv_uniform = True
+white_bkgd = False
+
+### CONSOLE AND TENSORBOARD
+i_img = 5000
+i_print = 5000
+i_weights = 10000
+
+anti_alias_pooling = 0
+mask_rgb = 1
+input_dir = True
+input_xyz = False
+
+training_height = 288
+
+w_cycle = 0.1
+cycle_factor = 0.1
+
+w_disp = 1e-1
+w_flow = 1e-2
+w_distortion = 1e-3
+w_reg = 0.05
+
+w_skew_entropy = 5e-4
+lr_multipler = 1.0
+
+decay_rate = 10
+anneal_cycle = True
+
+erosion_radius = 3
+occ_weights_mode = 0
+
+max_range = 42
+num_source_views = 7
+
+num_vv = 3
+mask_src_view = True
