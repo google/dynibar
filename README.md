@@ -113,8 +113,10 @@ For your own video, you need to include the following folders to run training.
     valid mask from frame 1 to frame 0.
 
 *   static_masks, dynamic_masks: motion masks indicating which region is
-    stationary or moving.
-
+    stationary or moving. You can perform morphological dilation and erosion operations
+    to ensure static_masks cover moving objects, and the dynamic_masks are 
+    approximately within the countours of moving objects.
+    
 ### To train the model:
 
 ```bash
