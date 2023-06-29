@@ -217,7 +217,7 @@ class DynamicVideoDataset(Dataset):
         st_mask_path = os.path.join(
             '/'.join(rgb_file.split('/')[:-2]),
             'dynamic_masks',
-            '%05d.png' % st_near_id,
+            '%d.png' % st_near_id,
         )
         st_mask = imageio.imread(st_mask_path).astype(np.float32) / 255.0
         st_mask = cv2.resize(
