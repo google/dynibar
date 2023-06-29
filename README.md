@@ -66,7 +66,7 @@ Note: It will take ~8 hours to evaluate each scene with 4x Nvidia A100 GPUs.
 
 We provide a template input data for the NSFF example video, which can
 be downloaded
-[here]([https://drive.google.com/file/d/1t6VLtcdxITFcdm9fi9SSFOiHqgHu9wdP/view?usp=sharing](https://drive.google.com/file/d/1t6VLtcdxITFcdm9fi9SSFOiHqgHu9wdP/view?usp=sharing))
+[here](https://drive.google.com/file/d/1t6VLtcdxITFcdm9fi9SSFOiHqgHu9wdP/view?usp=sharing)
 
 The input data directory should be in the following format:
 xxx/release/kid-running/dense/***
