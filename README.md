@@ -21,7 +21,7 @@ The following codebase was successfully run with Python 3.8 and CUDA 11.3. We
 suggest installing the library in a virtual environment such as Anaconda.
 
 To install required libraries, run: \
-`conda env create -f enviornment_dynibar.yml`
+`conda env create -f environment_dynibar.yml`
 
 To install softmax splatting for preprocessing, clone and install the library
 from [here](https://github.com/hperrot/splatting).
