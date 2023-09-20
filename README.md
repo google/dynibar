@@ -4,7 +4,7 @@ This is not an officially supported Google product.
 
 ### [Project Page](https://dynibar.github.io/)
 
-Implementation for CVPR 2023 paper
+Implementation for CVPR 2023 paper (best paper hornoable mentione)
 
 [DynIBaR: Neural Dynamic Image-Based Rendering, CVPR 2023](https://dynibar.github.io/)<br>
 
