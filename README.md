@@ -91,7 +91,7 @@ For your own video, you need to include the following folders to run training.
     ```
 
 *   source_virtual_views_wxh: virtual source views used to improve training
-    stability and rendering quality (for monocular video only). You should run
+    stability and rendering quality (used in monocular video only). Running
     the following script to obtain them:
 
     ```bash
@@ -104,18 +104,18 @@ For your own video, you need to include the following folders to run training.
     ```
 
 *   flow_i1, flow_i2, flow_i3: estimated optical flows within temporal window of
-    length 3. You should follow this
-    [code](https://github.com/zhengqili/Neural-Scene-Flow-Fields/blob/main/nsff_scripts/run_flows_video.py)
-    to run optical flow between every frame i and its nearby frames i+1, i+2,
+    length 3. You can follow prior NSFF
+    [script](https://github.com/zhengqili/Neural-Scene-Flow-Fields/blob/main/nsff_scripts/run_flows_video.py)
+    to run optical flows between the frame i and its nearby frames i+1, i+2,
     i+3, and save them in folders "flow_i1", "flow_i2", "flow_i3" respectively.
     For example, 00000_fwd.npz in folder "flow_i1" stores forward flow and valid
     mask from frame 0 to frame 1, and 00000_bwd.npz stores backward flow and
     valid mask from frame 1 to frame 0.
 
 *   static_masks, dynamic_masks: motion masks indicating which region is
-    stationary or moving. You can perform morphological dilation and erosion operations
-    to ensure static_masks cover moving objects, and the dynamic_masks are 
-    approximately within the countours of moving objects.
+    stationary or moving. You can perform morphological dilation and erosion operations respectively
+    to ensure static_masks sufficeintly cover the regions of moving objects, and the regions from dynamic_masks 
+    are within the true regions of moving objects.
     
 ### To train the model:
 
@@ -129,6 +129,13 @@ For your own video, you need to include the following folders to run training.
   python train.py \
   --config configs/train_kid-running.txt
 ```
+
+Hyperparameters in config txt file you might need to know for training a good model on in-the-wild videos
+* rootdir: code root directory, should be in format: YOUR_PATH/dynibar
+* folder_path: data root directory, 
+* N_rand: number of random samples at each iterations. Try to set it as large as possible, typically >= 4000 gives good results
+* init_decay_epoch: number of epochs to linaerly decay the data-driven depth and optical flow losses. Modify this such that num_video_frames * init_decay_epoch = 30~40K 
+* max_range, num_source_views: max_range indicates maximum search frame ranges to select source views for static model. num_source_views*2 is number of source views used for static model.
 
 The tensorboard includes rendering visualization as shown below.
 
