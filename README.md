@@ -133,7 +133,7 @@ For your own video, you need to include the following folders to run training.
 Hyperparameters in config txt file you might need to know for training a good model on in-the-wild videos
 * rootdir: code root directory, should be in format: YOUR_PATH/dynibar
 * folder_path: data root directory, 
-* N_rand: number of random samples at each iterations. Try to set it as large as possible, typically >= 4000 gives good results
+* N_rand: number of random samples at each iterations. Try to set it as large as possible, typically > 3000 gives good results
 * init_decay_epoch: number of epochs to linaerly decay the data-driven depth and optical flow losses. Modify this such that num_video_frames * init_decay_epoch = 30~40K 
 * max_range, num_source_views: max_range indicates maximum search frame ranges to select source views for static model. num_source_views*2 is number of source views used for static model.
 
