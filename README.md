@@ -116,6 +116,7 @@ For your own video, you need to include the following folders to run training.
     stationary or moving. You can perform morphological dilation and erosion operations respectively
     to ensure static_masks sufficeintly cover the regions of moving objects, and the regions from dynamic_masks 
     are within the true regions of moving objects.
+    (Note: due to dependency reason, we don't release code to generate the masks. Instead you could use [script](https://github.com/zhengqili/Neural-Scene-Flow-Fields/blob/main/nsff_scripts/run_flows_video.py#L87) from NSFF to generate coarse masks for your usage)
     
 ### To train the model:
 
